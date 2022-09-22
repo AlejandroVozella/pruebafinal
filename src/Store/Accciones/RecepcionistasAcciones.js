@@ -29,11 +29,11 @@ export function agregarNuevoRecepcionistaAccion(recepcionista) {
   return async (dispatch) => {
     try {
       console.log("envio datos al servidor");
-      await axios.post(
+      let data = await axios.post(
         "https://app-final-bk.herokuapp.com/recepcionistas",
         recepcionista
       );
-      dispatch(agregarRecepcionista());
+      dispatch(agregarRecepcionista(data.data.data));
       //Alerta OK.
       Swal.fire("Correcto", "Se agrego correctamente...", "success");
     } catch (error) {
