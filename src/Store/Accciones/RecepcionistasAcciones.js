@@ -7,6 +7,7 @@ import {
   GET_RECEPCIONISTAS,
   ELIMINAR_RECEPCIONISTA,
   ELIMINAR_RECEPCIONISTA_ERROR,
+  EDIT_RECEPCIONISTA,
 } from "../../Types/Recepcionistas";
 
 export const obtenerRecepcionistasAccion =
@@ -28,7 +29,7 @@ export const obtenerRecepcionistasAccion =
 export function agregarNuevoRecepcionistaAccion(recepcionista) {
   return async (dispatch) => {
     try {
-      console.log("envio datos al servidor");
+      console.log("envio datos al servidor ", recepcionista);
       let data = await axios.post(
         "https://app-final-bk.herokuapp.com/recepcionistas",
         recepcionista
@@ -82,4 +83,32 @@ const elminarRecepcionista = (id) => ({
 const elminarRecepcionistaError = (status) => ({
   type: ELIMINAR_RECEPCIONISTA_ERROR,
   payload: status,
+});
+
+export function editarNuevoRecepcionistaAccion(recepcionista) {
+  return async (dispatch) => {
+    try {
+      console.log("envio datos al servidor ", recepcionista);
+      let data = await axios.post(
+        "https://app-final-bk.herokuapp.com/recepcionistas",
+        recepcionista
+      );
+      dispatch(editarRecepcionista(data.data.data));
+      //Alerta OK.
+      Swal.fire("Correcto", "Se agrego correctamente...", "success");
+    } catch (error) {
+      console.log(error);
+      //Alerta Fallida.
+      Swal.fire({
+        icon: "error",
+        title: "Ocurrio un error.",
+        text: "Ocurrio un error, intenta de nuevo.",
+      });
+    }
+  };
+}
+
+const editarRecepcionista = (recepcionista) => ({
+  type: EDIT_RECEPCIONISTA,
+  payload: recepcionista,
 });

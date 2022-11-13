@@ -3,6 +3,7 @@ import {
   GET_RECEPCIONISTAS,
   ELIMINAR_RECEPCIONISTA,
   ELIMINAR_RECEPCIONISTA_ERROR,
+  EDIT_RECEPCIONISTA,
 } from "../../Types/Recepcionistas";
 
 const inicialState = {
@@ -23,6 +24,16 @@ export default function RecepcionistasReducers(state = inicialState, action) {
         recepcionistas: [...state.recepcionistas, action.payload],
         error: false,
       };
+    case EDIT_RECEPCIONISTA:
+      let recepcionistas = state.recepcionistas.filter(
+        (recepcionista) => recepcionista._id !== action.payload._id
+      );
+      return {
+        ...state,
+        recepcionistas: [...recepcionistas, action.payload],
+        error: false,
+      };
+
     case ELIMINAR_RECEPCIONISTA:
       return {
         ...state,
