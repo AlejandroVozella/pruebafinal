@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
-const EditRecepcionista = ({ onEdit }) => {
+const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
   // useState Se utiliza para setear los valores en los campos del formulario.
-  const [usuario, setUsuario] = useState("");
-  const [contraseña, setContraseña] = useState("");
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
+  const [usuario, setUsuario] = useState(recepcionistaEdit.usuario);
+  const [contraseña, setContraseña] = useState(recepcionistaEdit.contraseña);
+  const [nombre, setNombre] = useState(recepcionistaEdit.nombre);
+  const [apellido, setApellido] = useState(recepcionistaEdit.apellido);
 
   const onSubmit = (e) => {
     e.preventDefault();

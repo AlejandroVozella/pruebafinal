@@ -7,8 +7,7 @@ import { obtenerRecepcionistasAccion } from "../../Store/Accciones/Recepcionista
 import { agregarNuevoRecepcionistaAccion } from "../../Store/Accciones/RecepcionistasAcciones";
 import Recepcionista from "./Recepcionista";
 import NewRecepcionista from "./NewRecepcionista";
-import EditRecepcionista from "./EditRecepcionista/Index";
-import { editarNuevoRecepcionistaAccion } from "../../Store/Accciones/RecepcionistasAcciones";
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -53,8 +52,7 @@ const Recepcionistas = () => {
   const agregarNuevoRecepcionista = (recepcionista) =>
     dispatch(agregarNuevoRecepcionistaAccion(recepcionista));
 
-  const editarNuevoRecepcionista = (recepcionista) =>
-    dispatch(editarNuevoRecepcionistaAccion(recepcionista));
+  
 
   const agregarRecepcionista = (recepcionista) => {
     console.log("control add: ", recepcionista);
@@ -62,11 +60,8 @@ const Recepcionistas = () => {
     openCloseModal();
   };
 
-  const editarRecepcionista = (recepcionista) => {
-    console.log("control add: ", recepcionista);
-    editarNuevoRecepcionista(recepcionista);
-    openCloseModal();
-  };
+  
+ 
 
   const openCloseModal = () => {
     setShowModal(!showModal);
@@ -81,9 +76,7 @@ const Recepcionistas = () => {
         <Modal open={showModal} onClose={openCloseModal}>
           <NewRecepcionista onAdd={agregarRecepcionista} />
         </Modal>
-        <Modal open={showModal} onClose={openCloseModal}>
-          <EditRecepcionista onEdit={editarRecepcionista} />
-        </Modal>
+        
         {/* {loading ? <h4 className='text-center'> Loading... </h4> : null} */}
         {/* {error ? (
                 <p className='alert alert-danger p-2 m-4 text-center'>
