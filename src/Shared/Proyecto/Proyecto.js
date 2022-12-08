@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-//import MaterialTable from 'material-table';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Proyecto = () => {
