@@ -5,7 +5,7 @@ const Sidebar = ()=>{
     return(
         <div className="sidebar">
             <ul>
-                  <li>
+                <li>
                     <Link to="/">Inicio</Link>
                 </li>
                 
