@@ -18,8 +18,7 @@ const Inicio = () => {
     //Validar formulario.
     if (usuario.trim() === "" || contraseña.trim() === "" || "") return;
 
-    //Si no hay errores.
-    //Crear Reserva.
+    
     const userInicio = {
       usuario,
       contraseña,
