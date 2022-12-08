@@ -22,7 +22,6 @@ import PrivateRoute from "./Privateroute";
 // import NewCabana from './componentes/Cabanas/NewCabana';
 // import EditCabana from './componentes/Cabanas/EditCabana';
 
-
 const PublicRoute = ({ component: Component, restricted, ...rest }) => {
   const { user } = useAuthState();
   return (
@@ -59,13 +58,16 @@ function App() {
                 />
 
                 <Route exact path="/reservas" component={Reservas} />
+
                 <PublicRoute
                   restricted={false}
                   component={Inicio}
                   path="/"
                   exact
                 />
+
                 {/* <PublicRoute restricted={true} component={Cabanas} path="/signin" exact /> */}
+
                 <PrivateRoute component={Cabanas} path="/cabanas" exact />
               </Switch>
             </div>
