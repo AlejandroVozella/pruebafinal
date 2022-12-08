@@ -8,7 +8,6 @@ import { agregarNuevoRecepcionistaAccion } from "../../Store/Accciones/Recepcion
 import Recepcionista from "./Recepcionista";
 import NewRecepcionista from "./NewRecepcionista";
 
-
 const useStyles = makeStyles((theme) => ({
   modal: {
     position: "alsolute",
@@ -43,23 +42,18 @@ const Recepcionistas = () => {
   const { error, recepcionistas } = useSelector(
     (state) => state.recepcionistas
   );
-  
+
   console.log("general: ", recepcionistas);
 
   // Llama el action.
   const agregarNuevoRecepcionista = (recepcionista) =>
     dispatch(agregarNuevoRecepcionistaAccion(recepcionista));
 
-  
-
   const agregarRecepcionista = (recepcionista) => {
     console.log("control add: ", recepcionista);
     agregarNuevoRecepcionista(recepcionista);
     openCloseModal();
   };
-
-  
- 
 
   const openCloseModal = () => {
     setShowModal(!showModal);
@@ -74,17 +68,12 @@ const Recepcionistas = () => {
         <Modal open={showModal} onClose={openCloseModal}>
           <NewRecepcionista onAdd={agregarRecepcionista} />
         </Modal>
-        
-        {/* {loading ? <h4 className='text-center'> Loading... </h4> : null} */}
-        {/* {error ? (
-                <p className='alert alert-danger p-2 m-4 text-center'>
-                 Ocurrio un error.</p>
-                 ) : null} */}
+
+       
 
         <table className="table table-striped">
           <thead className="bg-primary table-dark">
             <tr>
-              
               <th scope="col">Usuario</th>
               <th scope="col">Contraseña</th>
               <th scope="col">Nombre</th>
@@ -115,4 +104,3 @@ const Recepcionistas = () => {
 };
 
 export default Recepcionistas;
-
