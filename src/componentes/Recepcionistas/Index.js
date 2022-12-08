@@ -118,30 +118,3 @@ const Recepcionistas = () => {
 
 export default Recepcionistas;
 
-// import React from 'react';
-
-// import { useDispatch, useSelector} from 'react-redux'
-
-// import { obtenerRecepcionistasAccion } from '../../Store/Accciones/RecepcionistasAcciones';
-
-// const Recepcionistas = ()=>{
-
-// const dispatch = useDispatch()
-
-// const recepcionistas= useSelector(store => store.recepcionistas.arrayrecepcionistas)
-//     console.log(recepcionistas)
-//     return(
-//         <div >
-//             <h3>Recepcionistas</h3>
-//             <button onClick={() => dispatch(obtenerRecepcionistasAccion())}>Recepcionistas</button>
-//             {
-//                 recepcionistas.map(item => (
-//                     <li key={item.id}>{item.usuario},{item.contraseña},{item.nombre},{item.apellido}</li>
-//                 ))
-//             }
-
-//         </div>
-//     )
-// }
-
-// export default Recepcionistas
