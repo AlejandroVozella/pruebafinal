@@ -43,9 +43,7 @@ const Recepcionistas = () => {
   const { error, recepcionistas } = useSelector(
     (state) => state.recepcionistas
   );
-  // const recepcionistas = useSelector(
-  //   (store) => store.recepcionistas.arrayrecepcionistas
-  // );
+  
   console.log("general: ", recepcionistas);
 
   // Llama el action.
