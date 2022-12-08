@@ -10,7 +10,7 @@ const Proyecto = () => {
         <thead></thead>
         <tbody>
           <tr className="alumnos">
-            <h4></h4>
+           
           </tr>
         </tbody>
       </table>
