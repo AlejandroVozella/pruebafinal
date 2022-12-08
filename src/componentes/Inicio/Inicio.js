@@ -15,7 +15,7 @@ const Inicio = () => {
   if (loggedUser) return <Redirect to="/recepcionista" />;
   const onSubmit = (e) => {
     e.preventDefault();
-    //Validar formulario.
+    
     if (usuario.trim() === "" || contraseña.trim() === "" || "") return;
 
     
