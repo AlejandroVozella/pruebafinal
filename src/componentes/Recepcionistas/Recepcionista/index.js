@@ -53,7 +53,7 @@ const Recepcionista = ({ recepcionista }) => {
         />
       </Modal>
       <tr>
-        {/* <td>{_id}</td> */}
+        
         <td>{usuario}</td>
         <td>{contraseña}</td>
         <td>{nombre}</td>
