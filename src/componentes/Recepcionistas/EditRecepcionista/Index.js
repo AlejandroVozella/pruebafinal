@@ -106,21 +106,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
                 />
               </div>
 
-              {/* <div className='form-group'>
-                <label>
-                  Cabaña: <span className='text-danger'>*</span>
-                </label>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Id de Cabaña'
-                  name='email'
-                  value={cabaña}
-                  onChange={(e) => setCabaña(e.target.value)}
-                />
-              </div> */}
-
-              
+                           
               <div className="form-group text-center">
                 <span className="font-weight-bold text-danger">
                   * Campos Requeridos
