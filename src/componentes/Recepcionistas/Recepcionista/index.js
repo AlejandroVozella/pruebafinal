@@ -26,9 +26,9 @@ const Recepcionista = ({ recepcionista }) => {
   const openCloseModal = () => {
     setShowModal(!showModal);
   };
-  //const history = useHistory(); // Habilitar history para redireccionar.
+  
   const eliminarrecepcionista = (id) => {
-    // preguntar al usuario
+    
     Swal.fire({
       title: "¿Estas seguro?",
       text: "Esta accion es irreversible.",
