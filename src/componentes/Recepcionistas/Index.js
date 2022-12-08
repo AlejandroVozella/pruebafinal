@@ -90,12 +90,7 @@ const Recepcionistas = () => {
                     recepcionista={recepcionista}
                   />
                 ))}
-            {/* {recepcionistas.map((recepcionista) => (
-              <Recepcionista
-                key={recepcionista._id}
-                recepcionista={recepcionista}
-              />
-            ))} */}
+            
           </tbody>
         </table>
       </>
