@@ -20,8 +20,8 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
     )
       return;
 
-    
-    
+    //Si no hay errores.
+    //Crear Reserva.
     const recepcionista = {
       usuario,
       contraseña,
@@ -29,7 +29,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
       apellido,
     };
 
-    
+    //console.log('Antes de enviar: ', recepcionista);
 
     onEdit(recepcionista, recepcionistaEdit._id);
 
@@ -120,20 +120,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
                 />
               </div> */}
 
-              {/* <div className='form-group'>
-                <label>
-                  Recepcionista: <span className='text-danger'>*</span>
-                </label>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Id de la ecepcionista'
-                  name='phone'
-                  value={recepcionista}
-                  onChange={(e) => setRecepcionista(e.target.value)}
-                />
-              </div> */}
-
+              
               <div className="form-group text-center">
                 <span className="font-weight-bold text-danger">
                   * Campos Requeridos
