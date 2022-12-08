@@ -20,8 +20,8 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
     )
       return;
 
-    //Si no hay errores.
-    //Crear Reserva.
+    
+    
     const recepcionista = {
       usuario,
       contraseña,
