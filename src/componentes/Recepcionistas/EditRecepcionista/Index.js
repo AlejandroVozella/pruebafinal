@@ -31,7 +31,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
 
     //console.log('Antes de enviar: ', recepcionista);
 
-    onEdit(recepcionista,recepcionistaEdit._id);
+    onEdit(recepcionista, recepcionistaEdit._id);
 
     setUsuario("");
     setContraseña("");
@@ -144,7 +144,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
                 type="submit"
                 className="btn btn-primary font-weight-bold text-uppercase d-block w-100"
               >
-                Agregar
+                Aceptar
               </button>
             </form>
           </div>
