@@ -31,7 +31,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
 
     //console.log('Antes de enviar: ', recepcionista);
 
-    onEdit(recepcionista);
+    onEdit(recepcionista,recepcionistaEdit._id);
 
     setUsuario("");
     setContraseña("");

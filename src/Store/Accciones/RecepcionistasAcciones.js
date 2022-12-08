@@ -85,12 +85,12 @@ const elminarRecepcionistaError = (status) => ({
   payload: status,
 });
 
-export function editarNuevoRecepcionistaAccion(recepcionista) {
+export function editarNuevoRecepcionistaAccion(recepcionista,id) {
   return async (dispatch) => {
     try {
       console.log("envio datos al servidor ", recepcionista);
-      let data = await axios.post(
-        "https://app-final-bk.herokuapp.com/recepcionistas",
+      let data = await axios.put(
+        "https://app-final-bk.herokuapp.com/recepcionistas/"+ id,
         recepcionista
       );
       dispatch(editarRecepcionista(data.data.data));

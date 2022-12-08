@@ -13,11 +13,13 @@ const Recepcionista = ({ recepcionista }) => {
   const [showModal, setShowModal] = useState(false);
 
   const dispatch = useDispatch();
-  const editarNuevoRecepcionista = (recepcionista) =>
-    dispatch(editarNuevoRecepcionistaAccion(recepcionista));
-  const editarRecepcionista = (recepcionista) => {
+  const editarNuevoRecepcionista = (recepcionista, id) =>
+    dispatch(editarNuevoRecepcionistaAccion(recepcionista, id));
+  const editarRecepcionista = (recepcionista, id) => {
     console.log("control add: ", recepcionista);
-    editarNuevoRecepcionista(recepcionista);
+    console.log("control editrecepcionista: ", id);
+    editarNuevoRecepcionista(recepcionista, id);
+
     openCloseModal();
   };
 

@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 import "./style.css";
 import Proyecto from "../../Shared/Proyecto/Proyecto";
+import { doLogin , useAuthState , useAuthDispatch } from "../../context/auth-cotext";
+
 
 const Inicio = () => {
   const [usuario, setUsuario] = useState("");
   const [contraseña, setContraseña] = useState("");
+  const { user: loggedUser, status, error } = useAuthState();
+  const dispatch = useAuthDispatch();
+
+  const [userInicio, setUserInicio] = React.useState("");
+  if (loggedUser) return <Redirect to="/recepcionista" />;
   const onSubmit = (e) => {
     e.preventDefault();
     //Validar formulario.
@@ -12,12 +20,14 @@ const Inicio = () => {
 
     //Si no hay errores.
     //Crear Reserva.
-    const user = {
+    const userInicio = {
       usuario,
       contraseña,
     };
 
-    console.log("Antes de enviar: ", user);
+    console.log("Antes de enviar: ", userInicio);
+
+    doLogin(dispatch,userInicio)
 
     setUsuario("");
     setContraseña("");
