@@ -28,7 +28,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
       apellido,
     };
 
-    //console.log('Antes de enviar: ', recepcionista);
+    
 
     onEdit(recepcionista, recepcionistaEdit._id);
 
