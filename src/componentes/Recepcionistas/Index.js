@@ -86,7 +86,7 @@ const Recepcionistas = () => {
         <table className="table table-striped">
           <thead className="bg-primary table-dark">
             <tr>
-              {/* <th scope="col">Id</th> */}
+              
               <th scope="col">Usuario</th>
               <th scope="col">Contraseña</th>
               <th scope="col">Nombre</th>
