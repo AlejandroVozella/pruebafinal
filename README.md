@@ -1,9 +1,9 @@
 # Proyecto Complejo Pueblo del Río
 
 ## Git Hub 
-https://github.com/AlejandroVozella/MCGA_Parcial2
+https://github.com/AlejandroVozella/pruebafinal
 
-## Integrantes 
+## Desarrollador 
 
 Vozella Alejandro 
 
