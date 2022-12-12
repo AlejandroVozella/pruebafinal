@@ -20,8 +20,7 @@ const NewRecepcionista = ({ onAdd }) => {
     )
       return;
 
-    //Si no hay errores.
-    //Crear Reserva.
+    
     const recepcionista = {
       usuario,
       contraseña,
@@ -29,7 +28,7 @@ const NewRecepcionista = ({ onAdd }) => {
       apellido,
     };
 
-    //console.log('Antes de enviar: ', recepcionista);
+    
 
     onAdd(recepcionista);
 
