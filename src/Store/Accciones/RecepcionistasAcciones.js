@@ -15,7 +15,7 @@ export const obtenerRecepcionistasAccion =
     try {
       const res = await axios.get(
         "https://app-final-bk.herokuapp.com/recepcionistas"
-        /*"https://final-mcga-alejandrovozella.herokuapp.com/recepcionistas"*/
+        
       );
       dispactch({
         type: GET_RECEPCIONISTAS,
