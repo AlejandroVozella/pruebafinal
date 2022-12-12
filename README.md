@@ -6,12 +6,11 @@ https://github.com/AlejandroVozella/MCGA_Parcial2
 ## Integrantes 
 
 Vozella Alejandro 
-Manuel Verolo
-Cesar Pagliarini 
+
 
 ### Correr el Proyecto 
 
-1.git clone https://github.com/AlejandroVozella/MCGA_Parcial2
+1.git clone https://github.com/AlejandroVozella/pruebafinal
 2.npm start 
 
 ### Servidor Local 
