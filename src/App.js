@@ -51,11 +51,11 @@ function App() {
 
                 <Route exact path="/clientes" component={Clientes} />
 
-                <Route
+                {/* <Route
                   exact
                   path="/recepcionistas"
                   component={Recepcionistas}
-                />
+                /> */}
 
                 <Route exact path="/reservas" component={Reservas} />
 
@@ -69,6 +69,11 @@ function App() {
                 {/* <PublicRoute restricted={true} component={Cabanas} path="/signin" exact /> */}
 
                 <PrivateRoute component={Cabanas} path="/cabanas" exact />
+                <PrivateRoute
+                  component={Recepcionistas}
+                  path="/recepcionistas"
+                  exact
+                />
               </Switch>
             </div>
           </div>
