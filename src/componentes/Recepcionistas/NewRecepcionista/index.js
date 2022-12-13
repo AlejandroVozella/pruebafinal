@@ -28,7 +28,7 @@ const NewRecepcionista = ({ onAdd }) => {
       apellido,
     };
 
-    
+    //console.log('Antes de enviar: ', recepcionista);
 
     onAdd(recepcionista);
 
@@ -105,33 +105,7 @@ const NewRecepcionista = ({ onAdd }) => {
                 />
               </div>
 
-              {/* <div className='form-group'>
-                <label>
-                  Cabaña: <span className='text-danger'>*</span>
-                </label>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Id de Cabaña'
-                  name='email'
-                  value={cabaña}
-                  onChange={(e) => setCabaña(e.target.value)}
-                />
-              </div> */}
-
-              {/* <div className='form-group'>
-                <label>
-                  Recepcionista: <span className='text-danger'>*</span>
-                </label>
-                <input
-                  type='text'
-                  className='form-control'
-                  placeholder='Id de la ecepcionista'
-                  name='phone'
-                  value={recepcionista}
-                  onChange={(e) => setRecepcionista(e.target.value)}
-                />
-              </div> */}
+              
 
               <div className="form-group text-center">
                 <span className="font-weight-bold text-danger">
