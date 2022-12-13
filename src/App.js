@@ -71,9 +71,7 @@ function App() {
                 <PrivateRoute component={Cabanas} path="/cabanas" exact />
                 <PrivateRoute
                   component={Recepcionistas}
-                  path="/recepcionistas"
-                  exact
-                />
+                  path="/recepcionistas" exact />
               </Switch>
             </div>
           </div>
