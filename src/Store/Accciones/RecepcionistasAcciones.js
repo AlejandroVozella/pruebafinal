@@ -95,7 +95,7 @@ export function editarNuevoRecepcionistaAccion(recepcionista,id) {
       );
       dispatch(editarRecepcionista(data.data.data));
       //Alerta OK.
-      Swal.fire("Correcto", "Se agrego correctamente...", "success");
+      Swal.fire("Correcto", "Se edito correctamente...", "success");
     } catch (error) {
       console.log(error);
       //Alerta Fallida.
