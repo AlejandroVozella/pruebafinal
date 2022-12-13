@@ -20,7 +20,6 @@ const NewRecepcionista = ({ onAdd }) => {
     )
       return;
 
-    
     const recepcionista = {
       usuario,
       contraseña,
@@ -104,8 +103,6 @@ const NewRecepcionista = ({ onAdd }) => {
                   onChange={(e) => setApellido(e.target.value)}
                 />
               </div>
-
-              
 
               <div className="form-group text-center">
                 <span className="font-weight-bold text-danger">

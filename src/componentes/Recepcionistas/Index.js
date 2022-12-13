@@ -69,8 +69,6 @@ const Recepcionistas = () => {
           <NewRecepcionista onAdd={agregarRecepcionista} />
         </Modal>
 
-       
-
         <table className="table table-striped">
           <thead className="bg-primary table-dark">
             <tr>
@@ -90,7 +88,6 @@ const Recepcionistas = () => {
                     recepcionista={recepcionista}
                   />
                 ))}
-            
           </tbody>
         </table>
       </>

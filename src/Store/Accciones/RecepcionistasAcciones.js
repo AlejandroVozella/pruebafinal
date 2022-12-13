@@ -15,7 +15,6 @@ export const obtenerRecepcionistasAccion =
     try {
       const res = await axios.get(
         "https://app-final-bk.herokuapp.com/recepcionistas"
-        
       );
       dispactch({
         type: GET_RECEPCIONISTAS,
@@ -85,12 +84,12 @@ const elminarRecepcionistaError = (status) => ({
   payload: status,
 });
 
-export function editarNuevoRecepcionistaAccion(recepcionista,id) {
+export function editarNuevoRecepcionistaAccion(recepcionista, id) {
   return async (dispatch) => {
     try {
       console.log("envio datos al servidor ", recepcionista);
       let data = await axios.put(
-        "https://app-final-bk.herokuapp.com/recepcionistas/"+ id,
+        "https://app-final-bk.herokuapp.com/recepcionistas/" + id,
         recepcionista
       );
       dispatch(editarRecepcionista(data.data.data));

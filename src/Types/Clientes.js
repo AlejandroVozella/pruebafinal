@@ -1,1 +1,1 @@
-export const GET_CLIENTES='GET_CLIENTES';
+export const GET_CLIENTES = "GET_CLIENTES";

@@ -55,19 +55,3 @@ export default function RecepcionistasReducers(state = inicialState, action) {
       return state;
   }
 }
-//import { GET_RECEPCIONISTAS
-
-// } from '../../Types/Recepcionistas';
-
-// const inicialState= {
-//     arrayrecepcionistas: []
-// } ;
-
-// export default function RecepcionistasReducers (state= inicialState,action) {
-//     switch (action.type) {
-//       case GET_RECEPCIONISTAS:
-//         return {...state, arrayrecepcionistas: action.payload}
-//         default:
-//             return state
-//     }
-// };

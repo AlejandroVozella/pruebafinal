@@ -18,9 +18,7 @@ import Reservas from "./componentes/Reservas";
 import { AuthProvider, useAuthState } from "./context/auth-cotext";
 import PrivateRoute from "./Privateroute";
 
-// //Componentes de Cabañas
-// import NewCabana from './componentes/Cabanas/NewCabana';
-// import EditCabana from './componentes/Cabanas/EditCabana';
+
 
 const PublicRoute = ({ component: Component, restricted, ...rest }) => {
   const { user } = useAuthState();
@@ -71,7 +69,9 @@ function App() {
                 <PrivateRoute component={Cabanas} path="/cabanas" exact />
                 <PrivateRoute
                   component={Recepcionistas}
-                  path="/recepcionistas" exact />
+                  path="/recepcionistas"
+                  exact
+                />
               </Switch>
             </div>
           </div>

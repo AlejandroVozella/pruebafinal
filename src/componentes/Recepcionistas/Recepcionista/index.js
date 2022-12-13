@@ -26,9 +26,8 @@ const Recepcionista = ({ recepcionista }) => {
   const openCloseModal = () => {
     setShowModal(!showModal);
   };
-  
+
   const eliminarrecepcionista = (id) => {
-    
     Swal.fire({
       title: "¿Estas seguro?",
       text: "Esta accion es irreversible.",
@@ -53,7 +52,6 @@ const Recepcionista = ({ recepcionista }) => {
         />
       </Modal>
       <tr>
-        
         <td>{usuario}</td>
         <td>{contraseña}</td>
         <td>{nombre}</td>

@@ -9,4 +9,3 @@ const EditReserva = () => {
 }
 
 export default EditReserva
-Editar Reserva

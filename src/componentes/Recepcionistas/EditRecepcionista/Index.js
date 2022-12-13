@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
-  
   const [usuario, setUsuario] = useState(recepcionistaEdit.usuario);
   const [contraseña, setContraseña] = useState(recepcionistaEdit.contraseña);
   const [nombre, setNombre] = useState(recepcionistaEdit.nombre);
@@ -10,7 +9,7 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    
+
     if (
       usuario.trim() === "" ||
       contraseña.trim() === "" ||
@@ -20,15 +19,12 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
     )
       return;
 
-    
     const recepcionista = {
       usuario,
       contraseña,
       nombre,
       apellido,
     };
-
-    
 
     onEdit(recepcionista, recepcionistaEdit._id);
 
@@ -105,7 +101,6 @@ const EditRecepcionista = ({ onEdit, recepcionistaEdit }) => {
                 />
               </div>
 
-                           
               <div className="form-group text-center">
                 <span className="font-weight-bold text-danger">
                   * Campos Requeridos
